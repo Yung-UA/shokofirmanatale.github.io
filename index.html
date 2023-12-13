@@ -1,0 +1,172 @@
+<head>
+	<title>Example Form</title>
+	<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+	<script>
+		$(document).ready(function() {
+			$('#submit-btn').click(function() {
+				var name = $('#name-field').val();
+				var email = $('#email-field').val();
+				var tel = $('#tel-field').val();
+        var telNew = tel.slice(0, 3) + '-' + tel.slice(3, 6) + '-' + tel.slice(6);
+
+				document.querySelector("tr.name p b").textContent = name;
+
+        document.querySelector("tr.info.mail-telcom a").textContent = email;
+        document.querySelector("tr.info.mail-telcom a").setAttribute('href', 'mailto:'+email);
+
+        document.querySelector("tr.info.tel-ing a").textContent = telNew;
+        document.querySelector("tr.info.tel.ing a").setAttribute('href', 'tel:'+tel);
+			});
+		});
+	</script>
+</head>
+<body>
+	<form>
+		<label for="name-field">Name:&nbsp</label>
+		<input type="text" id="name-field"><br><br>
+
+		<label for="email-field">Email:&nbsp</label>
+		<input type="email" id="email-field"><br><br>
+
+		<label for="tel-field">Tel:&nbsp&nbsp&nbsp&nbsp&nbsp</label>
+		<input type="tel" id="tel-field"><br><br>
+
+		<input type="button" value="CREA" id="submit-btn">
+	</form>
+
+<table border="0" style="font-family: 'andale mono', monospace; color: #fff; font-weight: 400;  background-image: none; background-color: #0f1620;line-height: normal; box-sizing: border-box; margin: 0; padding: 0; border: none; border-collapse: collapse; border-spacing: 0; min-height: 100px;width: 770px;text-decoration: none;">
+  <style >
+    tbody {
+      font-family: 'andale mono', monospace; 
+      color: #fff; 
+      font-weight: 400; 
+      line-height: normal; 
+      box-sizing: border-box; 
+      margin: 0; 
+      padding: 0; 
+      border: none; 
+      border-collapse: collapse; 
+      border-spacing: 0; 
+      min-height: 100px; 
+      width: 770px; 
+      background-image: none;
+      background-color: #04173a;
+      background: #04173a center left; 
+      background-size: auto; 
+      text-decoration: none;
+    }
+    
+    .name h2 {
+      margin: 0; 
+      padding: 0; 
+      font-size:22px;
+    }
+    
+    .info a {
+      margin: 0; 
+      padding: 0;
+      color: #ffc020; 
+      text-decoration: none;
+    }
+    
+    .info .tel-ing img {
+      height: 20px;
+    }
+    
+    .info .mail-telcom img {
+      height: 20px;
+    }
+    
+    .shoko h2 {
+      margin: 0; 
+      padding: 0; 
+      font-size: 22px;
+    }
+    
+    .shoko-info {
+      margin: 0; 
+      padding: 0; 
+      font-size: 14px;
+    }
+    
+    .info .mail-shoko-serv-i img {
+      height: 20px;
+    }
+    
+    .info .site img {
+      height: 20px;
+    }
+    
+    .info .address img {
+      height: 20px;
+    }
+    .one {
+      background-color: #04173a;
+    }
+    </style>  
+        <tbody class="back" style="background: #04173a center left;  background-size: auto; text-decoration: none; width: 770px;">
+          <tr class="name">
+            <td style="background-color: #04173a;">&nbsp;</td>
+            <td colspan="2">
+              <p style="margin: 0; padding: 0; font-size:22px; color: #fff;"><b>Allineamento sistemi</b></p>
+            </td>
+            <!-- Доданий стовбець з об'єднаним рядком для картинки -->
+            <td rowspan="8" style="background-color: #04173a; margin-left: auto;"><img src="https://lh3.googleusercontent.com/u/1/drive-viewer/AK7aPaCQ151nogvJldSJQbEYku2DKVdp-zYe6164B47ilYUJbO0jhZNTiGlSIBLGSetPX7vqqpAowSPjubSuJHn6eqE2NaQrbQ=w1920-h287" alt="Buon Natale" style="width:260px; height:260px;"></td>
+          </tr>
+            <tr class="info tel-ing">
+              <td class="one" style="width: 20px;background-color: #04173a;">
+                <img src="https://i.ibb.co/2dDHvdc/phone.png" height="20" alt="tel"/>
+              </td>
+              <td class="two" colspan="2" style="font-size: 16px;">
+                <a href="tel:+393316640572" style="margin: 0; padding: 0; color: #ffc020; text-decoration: none;">+39-331-6640572</a>
+              </td>
+            </tr>
+            <tr class="info mail-telcom">
+              <td class="one" style="width: 20px;background-color: #04173a;">
+                <img src="https://i.ibb.co/Vw8Tjk9/contact.png" height="20" alt="contact"/>
+              </td>
+              <td class="two" colspan="2" style="font-size: 16px;">
+                <a href="mailto:shoko.telecomunicazioni@gmail.com" style="margin: 0; padding: 0; color: #ffc020; text-decoration: none;">shoko.telecomunicazioni@gmail.com</a>
+              </td>
+            </tr>
+            <tr class="shoko">
+              <td style="background-color: #04173a;">&nbsp;</td>
+              <td class="one" style="width: 250px; min-width: 100px; vertical-align: bottom;">
+                <p style="margin: 0; padding: 0; font-size: 22px; color: #fff;"><b>Shoko TLC S.r.l.</b></p>
+              </td>
+              <td>
+                <img src="https://i.ibb.co/8zSYhQb/logo.png" alt="logo" height="40"/>
+              </td>
+            </tr>
+        <tr class="shoko-info">
+            <td style="background-color: #04173a;">&nbsp;</td>
+            <td class="one" colspan="2" style="margin: 0; padding: 0; font-size: 14px; color: #fff;">Telecomunicazioni, ingegneria, servizi infrastrutturali</td>
+        </tr>
+        <tr class="info mail-shoko-serv-i">
+            <td class="one" style="width: 20px;background-color: #04173a;">
+                <img src="https://i.ibb.co/6Fz0jGc/mail.png" height="20" alt="mail"/>
+            </td>
+            <td class="two" colspan="2" style="font-size: 16px;">
+                <a href="mailto:info@shoko-tlc.it" style="margin: 0; padding: 0; color: #ffc020; text-decoration: none;">info@shoko-tlc.it</a>
+            </td>
+        </tr>
+        <tr class="info site">
+            <td class="one" style="width: 20px;background-color: #04173a;">
+                <img src="https://i.ibb.co/CbHGLhh/world.png" height="20" alt="site"/>
+            </td>
+            <td class="two" colspan="2" style="font-size: 16px;">
+                <a href="https://shoko-tlc.it/index.html" style="margin: 0; padding: 0; color: #ffc020; text-decoration: none;">www.shoko-tlc.it</a>
+            </td>
+        </tr>
+        <tr class="info address">
+            <td class="one" style="width: 20px;background-color: #04173a;">
+                <img src="https://i.ibb.co/Lvf1sDf/arrow.png" height="20" alt="address"/>
+            </td>
+            <td class="two" colspan="2" style="font-size: 16px;">
+                <a href="https://www.google.com.ar/maps/place/Via+Giacomo+Puccini,+7,+21020+Casciago+VA/@45.8231543,8.7656496,17z/data=!3m1!4b1!4m5!3m4!1s0x47867eef3b7ecee5:0x2f333d77f5471d4b!8m2!3d45.8231543!4d8.7678383" rel="noopener" style="margin: 0; padding: 0; color: #ffc020; text-decoration: none;">Puccini 7, 21020 Casciago (VA)</a>
+            </td>
+        </tr>
+    </tbody>
+</table>
+
+</body>
